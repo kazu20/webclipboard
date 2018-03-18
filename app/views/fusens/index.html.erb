@@ -1,7 +1,26 @@
 <script>
 $(function(){
   $(".box").draggable({
-    stack: '.box'
+     stack: '.box',
+     cancel: "p",
+     scrollSensitivity: "50",
+     stop: function(e, ui){
+         $.ajax({
+            url: "position/set_position",
+            type: "GET",
+            data: {top: ui.offset.top,
+                   left: ui.offset.left,
+                   dom_id: $(this).parent().attr("class")
+                  },
+            dateType: "html",
+            success: function(data){
+            //   alert("success");
+            },
+            error: function(data){
+            //   alert("error");
+            }
+         });
+      }
   })
 
  //modal表示時にtextareaにフォーカスする
