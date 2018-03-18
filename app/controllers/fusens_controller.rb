@@ -10,6 +10,7 @@ class FusensController < ApplicationController
   # GET /fusens/1
   # GET /fusens/1.json
   def show
+   redirect_to action: 'index'
   end
 
   # GET /fusens/new
