@@ -1,37 +1,34 @@
+<script>
+$(function(){
+  $(".box").draggable({
+    stack: '.box'
+  })
+
+ //modal表示時にtextareaにフォーカスする
+ $("#myModal").on('shown', function (){
+  $("#modaltext").focus();
+  });
+
+});
+</script>
 <p id="notice"><%= notice %></p>
 
 <h1>Fusens</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Message</th>
-      <th>Top</th>
-      <th>Left</th>
-      <th>Dom height</th>
-      <th>Dom width</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @fusens.each do |fusen| %>
-      <tr>
-        <td><%= fusen.title %></td>
-        <td><%= fusen.message %></td>
-        <td><%= fusen.top %></td>
-        <td><%= fusen.left %></td>
-        <td><%= fusen.dom_height %></td>
-        <td><%= fusen.dom_width %></td>
-        <td><%= link_to 'Show', fusen %></td>
-        <td><%= link_to 'Edit', edit_fusen_path(fusen) %></td>
-        <td><%= link_to 'Destroy', fusen, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class= "<%= fusen.id =%>"> 
+        <div class="box effect1"; 
+             style="width: <%= fusen.dom_width =%>px; 
+                    height: <%= fusen.dom_height =%>px; 
+                    position: absolute; 
+                    top: <%= fusen.top =%>px; 
+                    left: <%= fusen.left =%>px;"> 
+           <span style="float: right;">
+              <%= link_to sanitize('✖︎'), fusen, method: :delete %>
+           </span>
+          <%= simple_format(fusen.message) %>
+        </div> <!-- box effect1 -->
+      </div> 
     <% end %>
-  </tbody>
-</table>
-
-<br>
 
 <%= link_to 'New Fusen', new_fusen_path %>

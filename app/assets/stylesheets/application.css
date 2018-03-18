@@ -13,3 +13,95 @@
  *= require_tree .
  *= require_self
  */
+
+.box {
+   width:70%;
+   height:200px;
+   background:#FEFF60;
+   margin:40px auto;
+
+}
+
+.box p{
+   text-align:center;
+   position:relative;
+   top:45%;
+}
+
+.effect1{
+    -webkit-box-shadow: 0 5px 20px -6px #777;
+       -moz-box-shadow: 0 5px 20px -6px #777;
+            box-shadow: 0 5px 20px -6px #777;
+         border-radius: 5px;
+}
+
+.effect2{
+ position: relative;
+ border-radius:10px;
+/* box-shadow(rgba(0,0,0,.15)0 0 2px);*/
+}
+
+.effect2:before, .effect2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%; 
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.effect2:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+html,body {
+/*    background: url(/assets/cork-600x450.jpg) repeat 0 0; */
+/*    background: url(/assets/CorkBoard01-580x368.jpg) repeat 0 0;  */
+/*    background: url(/assets/CorkBoard02-580x362.jpg) repeat 0 0;   */
+
+/*  height: 100%; */
+}
+
+
+/*#wrap {
+  min-height: 100%;
+}
+*/
+
+#main {
+  overflow:auto;
+  padding-bottom:100px; /* this needs to be bigger than footer height*/
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  background-color: #EEE;
+  text-align: left;
+} 
+
+.footer-text{
+  text-align: right;
+  padding: 0 30px;
+}
+
