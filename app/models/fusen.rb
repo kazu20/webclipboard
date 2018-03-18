@@ -1,0 +1,2 @@
+class Fusen < ApplicationRecord
+end

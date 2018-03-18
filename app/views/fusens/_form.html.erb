@@ -1,0 +1,47 @@
+<%= form_with(model: fusen, local: true) do |form| %>
+  <% if fusen.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fusen.errors.count, "error") %> prohibited this fusen from being saved:</h2>
+
+      <ul>
+      <% fusen.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :fusen_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :message %>
+    <%= form.text_field :message, id: :fusen_message %>
+  </div>
+
+  <div class="field">
+    <%= form.label :top %>
+    <%= form.number_field :top, id: :fusen_top %>
+  </div>
+
+  <div class="field">
+    <%= form.label :left %>
+    <%= form.number_field :left, id: :fusen_left %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dom_height %>
+    <%= form.number_field :dom_height, id: :fusen_dom_height %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dom_width %>
+    <%= form.number_field :dom_width, id: :fusen_dom_width %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

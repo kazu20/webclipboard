@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @fusen.title %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @fusen.message %>
+</p>
+
+<p>
+  <strong>Top:</strong>
+  <%= @fusen.top %>
+</p>
+
+<p>
+  <strong>Left:</strong>
+  <%= @fusen.left %>
+</p>
+
+<p>
+  <strong>Dom height:</strong>
+  <%= @fusen.dom_height %>
+</p>
+
+<p>
+  <strong>Dom width:</strong>
+  <%= @fusen.dom_width %>
+</p>
+
+<%= link_to 'Edit', edit_fusen_path(@fusen) %> |
+<%= link_to 'Back', fusens_path %>
