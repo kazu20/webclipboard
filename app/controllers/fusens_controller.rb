@@ -5,6 +5,7 @@ class FusensController < ApplicationController
   # GET /fusens.json
   def index
     @fusens = Fusen.all
+    @fusen = Fusen.new
   end
 
   # GET /fusens/1
