@@ -12,36 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :fusen_title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :message %>
-    <%= form.text_field :message, id: :fusen_message %>
-  </div>
-
-  <div class="field">
-    <%= form.label :top %>
-    <%= form.number_field :top, id: :fusen_top %>
-  </div>
-
-  <div class="field">
-    <%= form.label :left %>
-    <%= form.number_field :left, id: :fusen_left %>
-  </div>
-
-  <div class="field">
-    <%= form.label :dom_height %>
-    <%= form.number_field :dom_height, id: :fusen_dom_height %>
-  </div>
-
-  <div class="field">
-    <%= form.label :dom_width %>
-    <%= form.number_field :dom_width, id: :fusen_dom_width %>
+    <%= form.text_area :message, id: :fusen_message, :class => "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "create", :class => "btn btn-primary" %>
   </div>
 <% end %>
