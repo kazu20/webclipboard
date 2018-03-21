@@ -23,6 +23,18 @@
 
 }
 
+.boxblue{
+   background:#1E90FF;
+}
+
+.boxyellow{
+   background:#FEFF60;
+}
+
+.boxred{
+   background:#FF0000;
+}
+
 .box p{
    text-align:center;
    position:relative;
