@@ -14,6 +14,14 @@
   <div class="field">
     <%= form.text_area :message, id: :fusen_message, :class => "form-control" %>
   </div>
+  
+  <div class="field">
+    <select class="form-control" id="boxcolor" name="boxcolor">
+      <option value="boxblue">blue</option>
+      <option value="boxyellow" selected="selected">yellow</option>
+      <option value="boxred">red</option>
+   </select> 
+  </div>
 
   <div class="actions">
     <%= form.submit "create", :class => "btn btn-primary" %>

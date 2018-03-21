@@ -29,6 +29,7 @@ class FusensController < ApplicationController
     @fusen = Fusen.new(fusen_params)
     @fusen.dom_height = 120
     @fusen.dom_width = 240
+    @fusen.color = params[:boxcolor]
 
     respond_to do |format|
       if @fusen.save
