@@ -36,9 +36,10 @@
 }
 
 .box p{
-   text-align:center;
+   text-align:left;
    position:relative;
-   top:45%;
+   top:15px;
+   left:15px;
 }
 
 .effect1{
