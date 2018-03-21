@@ -29,7 +29,6 @@ class FusensController < ApplicationController
     @fusen = Fusen.new(fusen_params)
     @fusen.dom_height = 120
     @fusen.dom_width = 240
-    @fusen.color = params[:boxcolor]
 
     respond_to do |format|
       if @fusen.save
@@ -74,6 +73,6 @@ class FusensController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fusen_params
-      params.require(:fusen).permit(:title, :message, :top, :left, :dom_height, :dom_width)
+      params.require(:fusen).permit(:title, :message, :top, :left, :dom_height, :dom_width, :color)
     end
 end
