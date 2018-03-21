@@ -43,8 +43,8 @@ $(function(){
   });
 
  //modal表示時にtextareaにフォーカスする
- $("#myModal").on('shown', function (){
-  $("#modaltext").focus();
+ $("#myModal").on('shown.bs.modal', function (){
+  $("#fusen_message").focus();
   });
 
 });
