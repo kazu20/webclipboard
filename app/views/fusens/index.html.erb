@@ -1,6 +1,25 @@
-<script>
+<script type="text/javascript">
 $(function(){
-  $('.box').resizable().draggable({
+  $('.box').resizable({
+   stop: function(e,ui){
+      $.ajax({
+         url: "position/set_width",
+         type: "GET",
+         data: {
+            dom_id: $(this).parent().attr("class"),
+            dom_width: $(this).width(),
+            dom_height: $(this).height()
+            },
+         dateType: "html",
+         success: function(data){
+         //   alert("success");
+         },
+         error: function(data){
+         //   alert("error");
+         }
+      });
+   }  
+}).draggable({
      stack: '.box',
      cancel: "p",
      scrollSensitivity: "50",
