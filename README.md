@@ -6,4 +6,4 @@ $ bundle install
 
 $ rails s
 
-https://raw.github.com/wiki/kazu20/webclipboard/images/sampleimage.png
+https://github.com/kazu20/webclipboard/blob/master/images/sampleimage.png
