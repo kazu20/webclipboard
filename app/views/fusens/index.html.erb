@@ -65,7 +65,7 @@ $(function(){
               <%= link_to sanitize('✏️'), edit_fusen_path(fusen)  %>
               <%= link_to sanitize('✖︎'), fusen, method: :delete %>
            </span>
-          <%= simple_format(fusen.message) %>
+          <%= simple_format(text_url_to_link(fusen.message)) %>
         </div> <!-- box effect1 -->
       </div> 
     <% end %>
