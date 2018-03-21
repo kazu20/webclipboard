@@ -6,4 +6,4 @@ $ bundle install
 
 $ rails s
 
-https://github.com/kazu20/webclipboard/blob/master/images/sampleimage.png
+![sample image](https://github.com/kazu20/webclipboard/blob/master/images/sampleimage.png)
