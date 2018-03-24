@@ -47,6 +47,11 @@ $(function(){
   $("#fusen_message").focus();
   });
 
+ //noticeを３秒でフェードアウト
+ $("#notice").fadeIn("slow",function(){
+  $(this).delay(3000).fadeOut("slow");
+ });
+
 });
 </script>
 <p id="notice"><%= notice %></p>
