@@ -67,8 +67,8 @@ $(function(){
                     top: <%= fusen.top =%>px; 
                     left: <%= fusen.left =%>px;"> 
            <span style="float: right;">
-              <%= link_to sanitize('✏️'), edit_fusen_path(fusen)  %>
-              <%= link_to sanitize('✖︎'), fusen, method: :delete %>
+              <%= link_to sanitize('<i class="glyphicon glyphicon-pencil"></i>'), edit_fusen_path(fusen)  %>
+              <%= link_to sanitize('<i class="glyphicon glyphicon-remove"></i>'), fusen, method: :delete %>
            </span>
              <%= auto_link(simple_format(fusen.message), :all, :target => "_blank") =%>
         </div> <!-- box effect1 -->
