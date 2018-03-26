@@ -11,7 +11,7 @@
                     top: <%= fusen.top =%>px; 
                     left: <%= fusen.left =%>px;"> 
            <span style="float: right;">
-              <%= link_to sanitize('<i class="glyphicon glyphicon-pencil"></i>'), edit_fusen_path(fusen)  %>
+              <%= link_to sanitize('<i class="glyphicon glyphicon-pencil"></i>'), edit_fusen_path(fusen), :data => {:toggle=>"modal", :target=>"#edit-Modal"} %>
               <%= link_to sanitize('<i class="glyphicon glyphicon-remove"></i>'), fusen, method: :delete %>
            </span>
              <%= auto_link(simple_format(fusen.message), :all, :target => "_blank") =%>
@@ -24,7 +24,7 @@
   New Fusen
 </button>
 
-<!-- Modal -->
+<!-- new Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -40,3 +40,21 @@
     </div>
   </div>
 </div>
+
+<!-- edit Modal -->
+<div class="modal fade" id="edit-Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editModalLabel">Edit Fusen</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= render 'form', fusen: @fusen %>
+      </div>
+    </div>
+  </div>
+</div>
+
