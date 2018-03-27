@@ -69,5 +69,9 @@ $(function(){
   $(this).delay(3000).fadeOut("slow");
  });
 
+$("#edit-Modal").on('hidden.bs.modal', function(e){
+  location.reload();
+});
+
 });
 

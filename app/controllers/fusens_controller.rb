@@ -21,6 +21,7 @@ class FusensController < ApplicationController
 
   # GET /fusens/1/edit
   def edit
+    render layout: false
   end
 
   # POST /fusens
