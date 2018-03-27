@@ -70,7 +70,7 @@ $(function(){
  });
 
 $("#edit-Modal").on('hidden.bs.modal', function(e){
-  location.reload();
+  location.href = "/fusens";
 });
 
 });
