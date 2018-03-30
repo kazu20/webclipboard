@@ -7,12 +7,21 @@ Webブラウザで付箋をペタペタ貼れるアプリです。
 
 # Install
 
+## local install
 ```
  $ git clone https://github.com/kazu20/webclipboard.git
  $ cd webclipboard
  $ bundle install
  $ rake db:migrate
  $ rails s
+```
+
+## Vagrant up
+```
+ $ git clone https://github.com/kazu20/webclipboard.git
+ $ cd webclipboard
+ $ vagrant up
+
 ```
 
 ![sample image](https://github.com/kazu20/webclipboard/blob/master/images/sampleimage.png)
