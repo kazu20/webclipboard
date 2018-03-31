@@ -1,7 +1,11 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Fusens</h1>
-
+<div class="row">
+  <div class="col-sm-8">
+    <h1>Fusens</h1>
+  </div>
+  <div class="col-sm-4">
+    <p id="notice"><%= notice %></p>
+  </div>
+</div> 
     <% @fusens.each do |fusen| %>
       <div class= "<%= fusen.id =%>"> 
         <div class="box <%= fusen.color =%> effect1"; 
