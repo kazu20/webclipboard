@@ -64,6 +64,11 @@ $(function(){
   $("#fusen_message").focus();
   });
 
+ //edit-modal表示時にtextareaにフォーカスする
+ $("#edit-Modal").on('shown.bs.modal', function (){
+  $("#edit_fusen_message").focus();
+  });
+
  //noticeを３秒でフェードアウト
  $("#notice").fadeIn("slow",function(){
   $(this).delay(3000).fadeOut("slow");
