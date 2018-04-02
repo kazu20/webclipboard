@@ -1,0 +1,43 @@
+<%= form_with(model: fusen, local: true) do |form| %>
+  <% if fusen.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fusen.errors.count, "error") %> prohibited this fusen from being saved:</h2>
+
+      <ul>
+      <% fusen.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.text_area :message, id: :edit_fusen_message, :class => "form-control" %>
+  </div>
+  
+  <div class="field">
+    <select class="form-control" id="boxcolor" name="fusen[color]">
+      <% if fusen.color == "boxblue" %>
+        <option value="boxblue" selected="selected">blue</option>
+        <option value="boxyellow" >yellow</option>
+        <option value="boxred">red</option>
+      <% elsif fusen.color == "boxyellow" then %>
+        <option value="boxblue">blue</option>
+        <option value="boxyellow" selected="selected">yellow</option>
+        <option value="boxred">red</option>
+      <% elsif fusen.color == "boxred" then %>
+        <option value="boxblue">blue</option>
+        <option value="boxyellow" >yellow</option>
+        <option value="boxred" selected="selected">red</option>
+      <% else %>
+        <option value="boxblue">blue</option>
+        <option value="boxyellow" selected="selected">yellow</option>
+        <option value="boxred">red</option>
+      <% end %>
+   </select> 
+  </div>
+
+  <div class="actions">
+    <%= form.submit "create", :class => "btn btn-primary" %>
+  </div>
+<% end %>
