@@ -24,4 +24,12 @@ Webブラウザで付箋をペタペタ貼れるアプリです。
 
 ```
 
+## Docker
+```
+ $ git clone https://github.com/kazu20/webclipboard.git
+ $ cd webclipboard
+ $ docker build -t username/imagename .
+ $ docker run -d -p 3000:3000 username/imagename
+```
+
 ![sample image](https://github.com/kazu20/webclipboard/blob/master/images/sampleimage.png)
