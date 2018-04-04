@@ -9,8 +9,6 @@ WORKDIR $APP_ROOT
 run apt-get update && \
     apt-get install -y nodejs sqlite3 --no-install-recommends
 
-COPY Gemfile $APP_ROOT
-COPY Gemfile.lock $APT_ROOT
 COPY . $APP_ROOT
 
 RUN \
@@ -18,9 +16,8 @@ RUN \
   cp ~/.gemrc /etc/gemrc && \
   chmod uog+r /etc/gemrc && \
   bundle install && \
-  rm -rf ~/.gem && \
-  rake db:migrate
-
+  rake db:migrate && \
+  rm -rf ~/.gem
 
 EXPOSE  3000
 CMD ["rails", "server", "-b", "0.0.0.0"]
