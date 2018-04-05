@@ -1,11 +1,13 @@
 # webclipbord
 Webブラウザで付箋をペタペタ貼れるアプリです。
+
 付箋は自由にドラッグ、リサイズできます。
 
 # Requirement
  ruby 2.4.1p111
 
 # Install
+それぞれの手順でインストール後に、Webブラウザで3000ポートにアクセス
 
 ## local install
 ```
@@ -22,7 +24,6 @@ Webブラウザで付箋をペタペタ貼れるアプリです。
  $ cd webclipboard
  $ vagrant up
 
-```
 
 ## Docker
 ```
