@@ -23,7 +23,7 @@ Webブラウザで付箋をペタペタ貼れるアプリです。
  $ git clone https://github.com/kazu20/webclipboard.git
  $ cd webclipboard
  $ vagrant up
-
+```
 
 ## Docker
 ```
