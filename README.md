@@ -5,9 +5,10 @@ Webブラウザで付箋をペタペタ貼れるアプリです。
 
 # Requirement
  ruby 2.4.1p111
+ rails 5.1.5
 
 # Install
-それぞれの手順でインストール後に、Webブラウザで3000ポートにアクセス
+それぞれの手順でインストール後に、Webブラウザで3000ポートにアクセスすると、利用できるようになります。
 
 ## local install
 ```
@@ -18,7 +19,7 @@ Webブラウザで付箋をペタペタ貼れるアプリです。
  $ rails s
 ```
 
-## Vagrant up
+## Vagrant
 ```
  $ git clone https://github.com/kazu20/webclipboard.git
  $ cd webclipboard
