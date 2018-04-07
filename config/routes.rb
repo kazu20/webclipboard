@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+  root 'fusens#index'
 
   devise_for :users
   get 'portal/index'
