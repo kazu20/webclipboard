@@ -1,5 +1,6 @@
 class FusensController < ApplicationController
   before_action :set_fusen, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /fusens
   # GET /fusens.json
