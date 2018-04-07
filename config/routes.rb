@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  root 'fusens#index'
+
+  devise_for :users
+  get 'portal/index'
+
+#  root_to: "home#index"
   resources :fusens
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get "position/set_width", :concroller => :position
