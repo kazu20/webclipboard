@@ -5,7 +5,7 @@ class FusensController < ApplicationController
   # GET /fusens
   # GET /fusens.json
   def index
-    @fusens = Fusen.all
+    @fusens = Fusen.where(create_user: current_user.id)
     @fusen = Fusen.new
   end
 
@@ -31,6 +31,7 @@ class FusensController < ApplicationController
     @fusen = Fusen.new(fusen_params)
     @fusen.dom_height = 120
     @fusen.dom_width = 240
+    @fusen.create_user = current_user.id
 
     respond_to do |format|
       if @fusen.save
