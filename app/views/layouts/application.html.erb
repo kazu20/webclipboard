@@ -11,6 +11,10 @@
   </head>
 
   <body>
+    <% if user_signed_in? %>
+      <div align="right"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete  %></div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
