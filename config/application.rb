@@ -15,7 +15,7 @@ module Webclipboard
 
    config.to_prepare do
      Devise::SessionsController.layout "welcome"
-     Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "application" : "welcome" }
+     Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "welcome" : "welcome" }
      Devise::ConfirmationsController.layout "welcome"
      Devise::UnlocksController.layout "welcome"            
      Devise::PasswordsController.layout "welcome"        

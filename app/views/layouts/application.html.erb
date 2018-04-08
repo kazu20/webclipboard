@@ -13,6 +13,7 @@
   <body>
     <% if user_signed_in? %>
       <div align="right"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete  %></div>
+      <div align="right"><%= link_to 'パスワード変更', edit_user_registration_path, method: :get  %></div>
     <% end %>
 
     <%= yield %>
