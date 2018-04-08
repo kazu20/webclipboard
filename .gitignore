@@ -26,3 +26,6 @@
 #Ignore .vagrant
 /.vagrant
 /.vagrant/*
+
+#Ignore all asset pipeline
+/public/assets/*
