@@ -1,11 +1,33 @@
-<div class="row">
-  <div class="col-sm-8">
-    <h1>Fusens</h1>
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
+      <span class="sr-only">メニュー</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+      <ul class="nav navbar-nav">
+        <li>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            New Fusen
+          </button>
+        </li>
+        <li>
+        </li>
+      </ul>
+
   </div>
-  <div class="col-sm-4">
-    <p id="notice"><%= notice %></p>
-  </div>
-</div> 
+  
+  <div id="gnavi" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to 'パスワード変更', edit_user_registration_path, method: :get  %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete  %></li>
+    </ul>
+   </div>
+</nav>
+
+ <p id="notice"><%= notice %></p>
+
     <% @fusens.each do |fusen| %>
       <div class= "<%= fusen.id =%>"> 
         <div class="box <%= fusen.color =%> effect1"; 
@@ -22,11 +44,6 @@
         </div> <!-- box effect1 -->
       </div> 
     <% end %>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-  New Fusen
-</button>
 
 <!-- new Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
