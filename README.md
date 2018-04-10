@@ -34,4 +34,5 @@ Webブラウザで付箋をペタペタ貼れるアプリです。
  $ docker run -d -p 3000:3000 username/imagename
 ```
 
+![login image](https://github.com/kazu20/webclipboard/blob/master/images/login.png)
 ![sample image](https://github.com/kazu20/webclipboard/blob/master/images/sampleimage.png)
