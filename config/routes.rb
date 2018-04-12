@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   root 'fusens#index'
 
   devise_for :users
-  get 'portal/index'
 
 #  root_to: "home#index"
   resources :fusens
