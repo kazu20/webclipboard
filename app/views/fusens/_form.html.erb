@@ -17,24 +17,10 @@
   
   <div class="field">
     <select class="form-control" id="boxcolor" name="fusen[color]">
-      <% if fusen.color == "boxblue" %>
-        <option value="boxblue" selected="selected">blue</option>
-        <option value="boxyellow" >yellow</option>
-        <option value="boxred">red</option>
-      <% elsif fusen.color == "boxyellow" then %>
-        <option value="boxblue">blue</option>
+       <option value="boxblue">blue</option>
         <option value="boxyellow" selected="selected">yellow</option>
         <option value="boxred">red</option>
-      <% elsif fusen.color == "boxred" then %>
-        <option value="boxblue">blue</option>
-        <option value="boxyellow" >yellow</option>
-        <option value="boxred" selected="selected">red</option>
-      <% else %>
-        <option value="boxblue">blue</option>
-        <option value="boxyellow" selected="selected">yellow</option>
-        <option value="boxred">red</option>
-      <% end %>
-   </select> 
+    </select> 
   </div>
 
   <div class="actions">
