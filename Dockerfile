@@ -16,9 +16,8 @@ RUN \
   cp ~/.gemrc /etc/gemrc && \
   chmod uog+r /etc/gemrc && \
   bundle install && \
-  rake db:migrate && \
   rm -rf ~/.gem
 
 EXPOSE  3000
-CMD ["rails", "server", "-b", "0.0.0.0"]
+CMD ["/usr/src/webclipboard/migrate.sh"]
 
