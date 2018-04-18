@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  db:
+    restart: always
+    image: postgres
+    ports:
+      - "5432:5432"
+
+  app:
+    restart: always
+    image: kazu20/webclipboard_compose
+    command: [/usr/src/webclipboard/migrate.sh]
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
