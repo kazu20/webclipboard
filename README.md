@@ -5,6 +5,7 @@ Webブラウザで付箋をペタペタ貼れるアプリです。
 
 # Requirement
  ruby 2.4.1p111
+
  rails 5.1.5
 
 # Install
