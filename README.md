@@ -12,7 +12,16 @@ Webブラウザで付箋をペタペタ貼れるアプリです。
 それぞれの手順でインストール後に、Webブラウザで3000ポートにアクセスすると、利用できるようになります。
 DBはPostgresを使っています。Docker-compose以外で起動する場合は、PostgreSQLが動いているサーバが必要になります。
 
-## local install
+## local install(sqlite3)
+```
+ $ git clone https://github.com/kazu20/webclipboard.git
+ $ cd webclipboard
+ $ bundle install
+ $ rake db:migrate
+ $ rails s
+```
+
+## local install(PostgreSQL)
 ```
  $ git clone https://github.com/kazu20/webclipboard.git
  $ cd webclipboard
