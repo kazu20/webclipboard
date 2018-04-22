@@ -26,6 +26,7 @@ DBはPostgresを使っています。Docker-compose以外で起動する場合�
  $ git clone https://github.com/kazu20/webclipboard.git
  $ cd webclipboard
  $ bundle install
+ $ cp config/database.yml config/database.yml_postgres
  $ export DB_HOST=PostgreSQL_Server_Name
  $ rake db:migrate
  $ rails s
