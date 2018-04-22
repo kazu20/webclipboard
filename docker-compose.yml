@@ -10,7 +10,7 @@ services:
   app:
     restart: always
     image: kazu20/webclipboard02
-    command: [/usr/src/webclipboard/start_app.sh]
+    command: [/usr/src/webclipboard/script/start_app.sh]
     ports:
       - "3000:3000"
     depends_on:

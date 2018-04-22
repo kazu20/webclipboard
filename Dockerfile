@@ -19,5 +19,5 @@ RUN \
   rm -rf ~/.gem
 
 EXPOSE  3000
-CMD ["/usr/src/webclipboard/start_app_sqlite.sh"]
+CMD ["/usr/src/webclipboard/script/start_app_sqlite.sh"]
 
