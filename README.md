@@ -3,6 +3,9 @@ Webブラウザで付箋をペタペタ貼れるアプリです。
 
 付箋は自由にドラッグ、リサイズできます。
 
+![login image](https://github.com/kazu20/webclipboard/blob/master/images/login.png)
+![sample image](https://github.com/kazu20/webclipboard/blob/master/images/sampleimage.png)
+
 # Requirement
  ruby 2.4.1p111 
 
@@ -55,5 +58,3 @@ DBはPostgresを使っています。Docker-compose以外で起動する場合�
  $ docker-compose up -d 
 ```
 
-![login image](https://github.com/kazu20/webclipboard/blob/master/images/login.png)
-![sample image](https://github.com/kazu20/webclipboard/blob/master/images/sampleimage.png)
