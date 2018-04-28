@@ -1,6 +1,6 @@
 # webclipbord
 Webブラウザで付箋をペタペタ貼れるアプリです。
-
+Webアプリなので、「ローカルの付箋にメモしてたから、外出先で確認できない！」といったことを無くします。
 付箋は自由にドラッグ、リサイズできます。
 
 ![login image](https://github.com/kazu20/webclipboard/blob/master/images/login.png)
@@ -13,8 +13,8 @@ Webブラウザで付箋をペタペタ貼れるアプリです。
  rails 5.1.5
 
 # Install
-それぞれの手順でインストール後に、Webブラウザで3000ポートにアクセスすると、利用できるようになります。
-DBはPostgresを使っています。Docker-compose以外で起動する場合は、PostgreSQLが動いているサーバが必要になります。
+以下の手順でインストール後にWebブラウザで3000ポートにアクセスすると、利用できるようになります。
+DBはsqlite3とPostgreSQLを使っています。
 
 ## local install(sqlite3)
 ```
@@ -59,3 +59,5 @@ DBはPostgresを使っています。Docker-compose以外で起動する場合�
  $ docker-compose up -d 
 ```
 
+# Authors
+kazu20@twitter
