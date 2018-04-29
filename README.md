@@ -12,6 +12,10 @@ Webアプリなので、「ローカルの付箋にメモしてたから、外�
 
  rails 5.1.5
 
+ docker 18.03.0-ce
+
+ docker-compose 1.20.1
+
 # Install
 以下の手順でインストール後にWebブラウザで3000ポートにアクセスすると、利用できるようになります。
 DBはsqlite3とPostgreSQLを使っています。
